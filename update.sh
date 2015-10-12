@@ -20,7 +20,8 @@ echo "-------------------"
 cd Maintenance
 
 echo "Downloading ccleaner..."
-wget -q -O - https://www.piriform.com/ccleaner/download/standard | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep '^http://download.piriform.com\|\.exe$' | sed -n 1p | wget -q -i -
+curl -J -O http://www.piriform.com/ccleaner/download/slim/downloadfile
+# Thanks /u/Synapse84
 echo "DONE"
 echo ""
 
