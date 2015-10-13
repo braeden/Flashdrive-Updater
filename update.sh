@@ -55,6 +55,10 @@ echo "Downloading chrome..."
 wget -q http://dl.google.com/chrome/install/149.27/chrome_installer.exe
 echo "DONE"
 echo ""
+echo "Downloading chrome cleanup"
+wget -q https://dl.google.com/dl/softwareremovaltool/win/chrome_cleanup_tool.exe
+echo "DONE"
+echo ""
 echo "Downloading sublime..."
 wget -q -O - http://www.sublimetext.com/2 | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep 'x64\ Setup\.exe$' | sed -n 1p | wget -q -i -
 echo "DONE"
