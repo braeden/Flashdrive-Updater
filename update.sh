@@ -37,15 +37,14 @@ echo "Downloading malwarebytes..."
 wget -q https://downloads.malwarebytes.org/file/mbam_current/ -O lastestMalwarebytes.exe
 echo "DONE"
 echo ""
-# echo "Downloading Rkill..."
-# wget -q http://download.bleepingcomputer.com/dl/0256e27336dafbafd51c5163362b8124/5619dabd/windows/security/security-utilities/r/rkill/rkill.exe
-# Not sure if it has a unique token that needs to be cycled 
-# echo "DONE"
-# echo ""
-# echo "Downloading ComboFix..."
-# wget -q http://download.bleepingcomputer.com/dl/267870605aed203e2bbfc5b050be7323/5619db5f/windows/security/anti-virus/c/combofix/ComboFix.exe
-# echo "DONE"
-# echo ""
+echo "Downloading Rkill..."
+wget -q -O - http://www.bleepingcomputer.com/download/rkill/dl/10/ | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep '^http\:\/\/download\.bleepingcomputer\.com\/dl.*rkill\.exe$' | wget -q -i -
+echo "DONE"
+echo ""
+echo "Downloading ComboFix..."
+wget -q -O - http://www.bleepingcomputer.com/download/combofix/dl/12/ | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep '^http\:\/\/download\.bleepingcomputer\.com\/dl.*ComboFix\.exe$' | wget -q -i -
+echo "DONE"
+echo ""
 
 cd ..
 
