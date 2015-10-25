@@ -4,7 +4,6 @@
 # Built to update my flashdrive full of programs
 clear
 declare -a directories=( "Maintenance" "MalwareRemoval" "Programs" )
-declare -a Maintenance=( "")
 echo "--Begin Update--"
 for i in "${directories[@]}"
 do
@@ -30,7 +29,6 @@ cd ..
 # This is an abomination... 
 # thanks greg - http://stackoverflow.com/users/123109/greg-bacon
 # Could probally be condensed - no easy link due to the version changes
-
 cd MalwareRemoval
 
 echo "Downloading malwarebytes..."
