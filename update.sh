@@ -19,7 +19,7 @@ echo "-------------------"
 cd Maintenance
 
 echo "Downloading ccleaner..."
-curl -J -O http://www.piriform.com/ccleaner/download/slim/downloadfile
+curl -s -J -O http://www.piriform.com/ccleaner/download/slim/downloadfile
 # Thanks /u/Synapse84
 echo "DONE"
 echo ""
@@ -43,7 +43,10 @@ echo "Downloading ComboFix..."
 wget -q -O - http://www.bleepingcomputer.com/download/combofix/dl/12/ | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep '^http\:\/\/download\.bleepingcomputer\.com\/dl.*ComboFix\.exe$' | wget -q -i -
 echo "DONE"
 echo ""
-
+echo "Downloading KDSSKiller"
+wget -q http://support.kaspersky.com/downloads/utils/tdsskiller.exe
+echo "DONE"
+echo ""
 cd ..
 
 cd Programs
