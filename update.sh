@@ -65,6 +65,7 @@ echo "DONE"
 echo ""
 echo "Downloading VLC..."
 wget -q http://download.videolan.org/pub/videolan/vlc/last/win64/vlc-2.2.0-win64.exe
+# Hopefully this will continue to work, I think this is a link to one version behind the latest
 echo "DONE"
 echo ""
 
