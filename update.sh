@@ -63,6 +63,10 @@ echo "Downloading sublime..."
 wget -q -O - http://www.sublimetext.com/2 | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep 'x64\ Setup\.exe$' | sed -n 1p | wget -q -i -
 echo "DONE"
 echo ""
+echo "Downloading VLC..."
+wget -q http://download.videolan.org/pub/videolan/vlc/last/win64/vlc-2.2.0-win64.exe
+echo "DONE"
+echo ""
 
 cd ..
 
